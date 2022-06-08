@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## [v4.12.0]
+### Add
+- support for version 8.X
+
+
 ## Unreleased
 [Full Changelog](https://github.com/pcfens/puppet-filebeat/compare/v4.11.0...HEAD)
 
