@@ -52,6 +52,7 @@ define filebeat::input (
   Boolean $pure_array                      = false,
   String $host                             = 'localhost:9000',
   Optional[String] $max_message_size       = undef,
+  Optional[Array] $parsers                 = undef,
 ) {
 
   if versioncmp($facts['filebeat_version'], '7.16') > 0 {

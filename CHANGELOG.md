@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## [v4.13.0]
+### Add
+- support for parsers in filebeat config
+
 ## [v4.12.0]
 ### Add
 - support for version 8.X
