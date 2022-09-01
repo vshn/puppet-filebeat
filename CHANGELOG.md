@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## [v4.13.1]
+### Fix
+- Fix bug that prevents Filebeat from getting installed introduced in v4.12.0
+
 ## [v4.13.0]
 ### Add
 - support for parsers in filebeat config
