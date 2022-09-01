@@ -55,12 +55,16 @@ define filebeat::input (
   Optional[Array] $parsers                 = undef,
 ) {
 
-  if versioncmp($facts['filebeat_version'], '7.16') > 0 {
-    $input_template = 'filestream.yml.erb'
-  } elsif versioncmp($facts['filebeat_version'], '6') > 0 {
-    $input_template = 'input.yml.erb'
+  if $facts['filebeat_version'] {
+    if versioncmp($facts['filebeat_version'], '7.16') > 0 {
+      $input_template = 'filestream.yml.erb'
+    } elsif versioncmp($facts['filebeat_version'], '6') > 0 {
+      $input_template = 'input.yml.erb'
+    } else {
+      $input_template = 'prospector.yml.erb'
+    }
   } else {
-    $input_template = 'prospector.yml.erb'
+    $input_template = 'filestream.yml.erb'
   }
 
   if 'filebeat_version' in $facts and $facts['filebeat_version'] != false {
