@@ -175,5 +175,7 @@ class filebeat::params {
     } else {
       $default_input_type = 'log'
     }
+  } else {
+    $default_input_type = 'filestream'
   }
 }
