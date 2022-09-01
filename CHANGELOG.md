@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## [v4.13.2]
+### Fix
+- Fix install bug in inpu.pp
+
 ## [v4.13.1]
 ### Fix
 - Fix bug that prevents Filebeat from getting installed introduced in v4.12.0
